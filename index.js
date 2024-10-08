@@ -6,7 +6,15 @@ const app = express();
 
 app.set("view endine", "ejs");
 
-app.use(express.urlencoded({ extended: true }));
+app.use((req, res, next) =>{
+    express.urlencoded({ extended: true });
+    res.setHeader("Acess-Control-Allow-Origin", "*");
+    res.header(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept"
+      );
+      next();
+});
 
 
 app.get("/", async (req, res) =>{
