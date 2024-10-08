@@ -8,7 +8,7 @@ app.set("view endine", "ejs");
 
 app.use((req, res, next) =>{
     
-    res.setHeader("Acess-Control-Allow-Origin", *);
+    res.setHeader("Acess-Control-Allow-Origin", "*");
     res.header(
         "Access-Control-Allow-Headers",
         "Origin, X-Requested-With, Content-Type, Accept"
