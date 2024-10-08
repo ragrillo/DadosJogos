@@ -7,7 +7,7 @@ const app = express();
 app.set("view endine", "ejs");
 
 app.use((req, res, next) =>{
-    express.urlencoded({ extended: true });
+    
     res.setHeader("Acess-Control-Allow-Origin", "*");
     res.header(
         "Access-Control-Allow-Headers",
